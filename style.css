@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif
+}
+body {
+    background-color: #f8f8f8;
+}
+header {
+    background-color: #711d3c;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+}
+nav ul li {
+    margin: 0 15px;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    transition: background 0.3s, color 0.3s;
+}
+nav ul li a:hover {
+    background:  #711d3c;
+    border-radius: 5px;
+}
+.hero {
+    text-align: center;
+    padding: 50px;
+    background: url('https://source.unsplash.com/1600x600/?makeup') no-repeat center center/cover;
+    color: rgb(0, 0, 0);
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.carousel-container {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.carousel img {
+    width:20%;
+}
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+.prev { left: 10px; }
+.next { right: 10px; }
+
+
+.pricing-section {
+    padding: 2rem;
+    background-color: #f5f5f5;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+.pricing-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.pricing-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 1.5rem;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.product-image {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+}
+
+.pricing-card h3 {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+    color: #333;
+}
+
+.pricing-card .price {
+    font-size: 1.8rem;
+    color:#711d3c;
+    margin: 0.5rem 0;
+    font-weight: bold;
+}
+
+.pricing-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.pricing-card ul li {
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.pricing-card .pricing-button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #711d3c;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.pricing-card .pricing-button:hover {
+    background-color: #82314f;
+}
+
+footer {
+    background-color:  #711d3c;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.Productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    }
+    
+    .producto {
+        border: 1px solid #711d3c;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    flex: 20px;
+    box-sizing: border-box;
+    }
+    
+    .producto img {
+        max-width: 100%;
+        height: auto;
+    }
+
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        padding: 20px;
+    }
+
+    .box {
+        background: #3498db;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        flex: 1 1 300px; /* Flexible, mínimo 300px */
+        border-radius: 8px;
+    }
+
+    @media (max-width: 600px) {
+        .container {
+            flex-direction: column;
+        }
+    }
+
+/* Contenedor del video */
+.video-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    width: 100%;
+    height: 100vh; /* Ocupa toda la pantalla */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Ajuste del video */
+.video-container video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantiene la proporción sin bordes negros */
+}
+
+
+/* Para pantallas medianas (tabletas) */
+@media (max-width: 1024px) {
+    .item {
+        width: 45%; /* En pantallas medianas, cada elemento ocupa el 45% */
+    }
+}
+
+/* Para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    .container {
+        justify-content: center; /* Centra los elementos en pantallas pequeñas */
+    }
+    .item {
+        width: 80%; /* En pantallas pequeñas, cada elemento ocupa el 80% */
+    }
+}
+
+/* Para pantallas muy pequeñas (móviles pequeños) */
+@media (max-width: 480px) {
+    .container {
+        justify-content: center; /* Centra los elementos */
+    }
+    .item {
+        width: 100%; /* En pantallas muy pequeñas, los elementos ocupan el 100% */
+    }
+}

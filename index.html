@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L I S M A R</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo"><img src="img/nuevo logo.png" alt="logo" width="150" ></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="makeup.html">Makeup</a></li>
+                <li><a href="skincare.html">Skincare</a></li>
+                <li><a href="hair.html">Hair</a></li>
+                <li><a href="fragance.html">Fragance</a></li>
+                <li><a href="contacto.html">Contactanos</a></li>
+            </ul>
+        </nav>
+       
+    </header>
+    <div class="video-container">
+        <video autoplay loop muted playsinline>
+            <source src="img/video MAC.mp4" type="video/mp4"> 
+            <source src="img/video MAC.mp4" type="video/ogg">
+            Tu navegador no soporta el elemento de video.
+        </video>
+    </div>
+      </div>
+    <div class="hero">Bienvenidos a nuestra tienda L I S M A R S H O P </div>
+  <center> <h2>productos destacados</h2></center>
+    <div class="carousel-container">
+        <div class="carousel">
+            <img src="img/patrick ta.webp" alt="Foto 1">
+            <img src="img/one size.webp" alt="Foto 2">
+            <img src="img/lip dior.webp" alt="Foto 3">
+            <img src="img/DIOOOOOOR.webp" alt="Foto 3">
+            <img src="img/huda.webp" alt="Foto 3">
+            <img src="img/dior labios.webp" alt="Foto 3">
+            <img src="img/yves.webp" alt="Foto 3">
+            <img src="img/sol.webp" alt="Foto 3">
+            <img src="img/the ordinary.webp" alt="Foto 3">
+            <img src="img/valentino.webp" alt="Foto 3">
+           
+        </div>
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+
+    <script>
+        let index = 0;
+
+        function moveSlide(step) {
+            const slides = document.querySelectorAll('.carousel img');
+            index = (index + step + slides.length) % slides.length;
+            document.querySelector('.carousel').style.transform = translateX
+        }
+    </script>
+
+</body>
+<footer>
+    &copy; 2025 L I S M A R S H O P - Todos los derechos reservados
+</footer>
+</html>
